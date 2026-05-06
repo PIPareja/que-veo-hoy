@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Questionnaire from '@/components/Questionnaire'
+import MovieResults from '@/components/MovieResults'
 
 function HomePage() {
     const [showResults, setShowResults] = useState(false)
@@ -9,15 +10,7 @@ function HomePage() {
             {!showResults ? (
                 <Questionnaire onSubmit={() => setShowResults(true)} />
             ) : (
-                <div className="text-center text-white">
-                    <h2 className="text-2xl font-bold">Aquí van los resultados</h2>
-                    <button
-                        onClick={() => setShowResults(false)}
-                        className="mt-4 text-gray-400 hover:text-white underline"
-                    >
-                        Volver al cuestionario
-                    </button>
-                </div>
+                <MovieResults onReset={() => setShowResults(false)} />
             )}
         </div>
     )
