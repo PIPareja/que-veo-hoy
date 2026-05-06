@@ -1,7 +1,9 @@
 function App() {
   return (
-    <div>
-      <h1>Qué veo hoy</h1>
+    <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+      <h1 className="text-4xl font-bold text-white">
+        Qué veo hoy
+      </h1>
     </div>
   )
 }
